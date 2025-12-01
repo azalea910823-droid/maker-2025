@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 신방학중학교 발명센터 교직원 연수</title>
+    <!-- Tailwind CSS (디자인용) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 폰트: 주아체(제목), 노토산스(본문) -->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8fafc; }
+        h1, h2, h3, .font-jua { font-family: 'Jua', sans-serif; }
+        
+        .img-hover {
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+        .img-hover:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+        
+        /* 모달 애니메이션 */
+        #imageModal {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        #imageModal.active .modal-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. 헤더 (타이틀) -->
+    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white pt-16 pb-24 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <i class="fa-solid fa-gear absolute top-10 left-10 text-9xl animate-spin-slow"></i>
+            <i class="fa-solid fa-lightbulb absolute bottom-10 right-10 text-9xl"></i>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <span class="inline-block bg-yellow-400 text-blue-900 font-bold px-4 py-1 rounded-full mb-4 text-sm md:text-base shadow-lg">
+                2025학년도 신방학중학교
+            </span>
+            <h1 class="text-4xl md:text-6xl mb-4 leading-tight">
+                내 손으로 뚝딱!<br>
+                <span class="text-yellow-300">힐링 메이커 자율연수</span>
+            </h1>
+            <p class="text-blue-100 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                메이커 기자재를 활용하여 나만의 작품을 만드는 실습 연수를 진행합니다.<br>
+                잠시 쉬어가는 힐링의 시간이 되기를 바랍니다. 
+            </p>
+        </div>
+    </header>
+
+    <!-- 2. 핵심 정보 (카드 형태) -->
+    <section class="container mx-auto px-4 -mt-16 relative z-20">
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 flex flex-col md:flex-row justify-around items-center text-center gap-6 border-b-4 border-yellow-400">
+            <div>
+                <div class="text-gray-400 text-sm mb-1">일시</div>
+                <div class="font-bold text-xl text-gray-800"><i class="fa-regular fa-clock text-blue-600 mr-2"></i>15:20 ~ 16:50 (90분)</div>
+            </div>
+            <div class="w-full h-px bg-gray-200 md:w-px md:h-12"></div>
+            <div>
+                <div class="text-gray-400 text-sm mb-1">장소</div>
+                <div class="font-bold text-xl text-gray-800"><i class="fa-solid fa-location-dot text-red-500 mr-2"></i>본교 발명교육센터 (기술실)</div>
+            </div>
+            <div class="w-full h-px bg-gray-200 md:w-px md:h-12"></div>
+            <div>
+                <div class="text-gray-400 text-sm mb-1">신청 사항</div>
+                <div class="font-bold text-xl text-blue-600"><i class="fa-solid fa-gift mr-2"></i>중복신청 가능</div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-6 mb-12">
+            <p class="text-red-500 font-bold bg-red-50 inline-block px-4 py-2 rounded-lg border border-red-200">
+                ⚠️ 실습 장비 한정으로 선착순 마감됩니다. 서둘러주세요!
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. 프로그램 소개 (갤러리 포함) -->
+    <section class="container mx-auto px-4 pb-24">
+        <h2 class="text-3xl text-center text-gray-800 mb-10"><i class="fa-solid fa-list-check mr-2 text-indigo-600"></i>프로그램 안내</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- 1차: 명찰 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
+                <div class="bg-blue-50 p-4 border-b border-blue-100 flex justify-between items-center">
+                    <span class="font-jua text-2xl text-blue-800">1차. 아크릴 명찰</span>
+                    <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">12/12(금)</span>
+                </div>
+                <div class="p-6 flex-grow">
+                    <p class="text-gray-600 mb-4 text-sm min-h-[40px]">
+                        레이저 커팅기의 정밀한 가공을 체험하고, 투명/골드 아크릴에 내 이름을 각인하여 고급 명찰을 제작합니다.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fa-solid fa-user-group mr-2"></i>정원 10명
+                    </div>
+                    <!-- 이미지 갤러리 -->
+                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                            <img src="1-1.jpg" alt="명찰 사진1" class="w-full h-full object-cover img-hover" onclick="openModal(this.src)">
+                        </div>
+                        <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                            <img src="1-2.jpg" alt="명찰 사진2" class="w-full h-full object-cover img-hover" onclick="openModal(this.src)">
+                        </div>
+                    </div>
+                    <p class="text-xs text-center text-gray-400 mt-2"><i class="fa-solid fa-magnifying-glass"></i> 사진을 클릭하면 크게 보입니다</p>
+                </div>
+            </div>
+
+            <!-- 2차: 머그컵 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col">
+                <div class="bg-orange-50 p-4 border-b border-orange-100 flex justify-between items-center">
+                    <span class="font-jua text-2xl text-orange-800">2차. 포토 머그컵</span>
+                    <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">12/15(월)</span>
+                </div>
+                <div class="p-6 flex-grow">
+                    <p class="text-gray-600 mb-4 text-sm min-h-[40px]">
+                        승화전사 기술을 활용하여 추억이 담긴 사진이나 직접 그린 그림을 머그컵에 선명하게 인쇄합니다.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fa-solid fa-user-group mr-2"></i>정원 10명
+                    </div>
+                    <!-- 이미지 갤러리 -->
+                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                            <img src="2-1.jpg" alt="머그컵 사진1" class="w-full h-full object-cover img-hover" onclick="openModal(this.src)">
+                        </div>
+                        <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                            <img src="2-2.jpg" alt="머그컵 사진2" class="w-full h-full object-cover img-hover" onclick="openModal(this.src)">
+                        </div>
+                    </div>
+                    <p class="text-xs text-center text-gray-400 mt-2"><i class="fa-solid fa-magnifying-glass"></i> 사진을 클릭하면 크게 보입니다</p>
+                </div>
+            </div>
+
+            <!-- 3차: 우드펜 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col relative">
+            
+                <div class="bg-green-50 p-4 border-b border-green-100 flex justify-between items-center">
+                    <span class="font-jua text-2xl text-green-800">3차. 수제 우드펜</span>
+                    <span class="bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">12/17(수)</span>
+                </div>
+                <div class="p-6 flex-grow">
+                    <p class="text-gray-600 mb-4 text-sm min-h-[40px]">
+                        목공 선반(유니맷)을 이용해 나무를 직접 깎고 다듬어, 세상에 하나뿐인 고급 우드 볼펜을 만듭니다.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                        <i class="fa-solid fa-user-group mr-2"></i>정원 6명</span>
+                    </div>
+                    <!-- 이미지 갤러리 -->
+                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                        <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                            <img src="3-1.jpg" alt="우드펜 사진1" class="w-full h-full object-cover img-hover" onclick="openModal(this.src)">
+                        </div>
+                        <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                            <img src="3-2.jpg" alt="우드펜 사진2" class="w-full h-full object-cover img-hover" onclick="openModal(this.src)">
+                        </div>
+                    </div>
+                    <p class="text-xs text-center text-gray-400 mt-2"><i class="fa-solid fa-magnifying-glass"></i> 사진을 클릭하면 크게 보입니다</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. 하단 고정 신청 버튼 -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-40">
+        <div class="container mx-auto max-w-2xl">
+            <a href="https://forms.gle/K4DEF88zUz4ePGTF7" target="_blank" 
+               class="block w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white text-center font-bold text-xl py-4 rounded-xl shadow-lg transform transition active:scale-95 flex items-center justify-center">
+               <span>지금 바로 신청하기</span>
+               <i class="fa-solid fa-arrow-right ml-2 animate-bounce-x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="h-24"></div> <!-- 버튼 가림 방지 여백 -->
+
+    <!-- 이미지 확대 모달 -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex justify-center items-center p-4 cursor-pointer" onclick="closeModal()">
+        <div class="relative w-full max-w-4xl max-h-[90vh] flex justify-center items-center modal-content" onclick="event.stopPropagation()">
+            <img id="modalImg" src="" alt="확대 이미지" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain">
+            <button onclick="closeModal()" class="absolute -top-10 right-0 text-white text-4xl hover:text-gray-300 focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- 스크립트 -->
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            
+            // 이미지 소스 설정 (이미지가 없을 때 대비)
+            modalImg.onerror = function() {
+                this.src = 'https://via.placeholder.com/800x600?text=이미지를+찾을+수+없습니다';
+                alert("사진 파일이 같은 폴더에 있는지 확인해주세요!\n(파일명: 1-1.jpg, 1-2.jpg 등)");
+            };
+            modalImg.src = src;
+            
+            // 모달 표시
+            modal.classList.remove('hidden');
+            // 약간의 딜레이 후 투명도 조절로 페이드인 효과
+            setTimeout(() => {
+                modal.classList.add('active');
+                modal.style.opacity = '1';
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.opacity = '0';
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // ESC 키로 닫기
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+
+    <style>
+        @keyframes bounce-x {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+        .animate-bounce-x {
+            animation: bounce-x 1s infinite;
+        }
+        .animate-spin-slow {
+            animation: spin 10s linear infinite;
+        }
+    </style>
+</body>
+</html>
